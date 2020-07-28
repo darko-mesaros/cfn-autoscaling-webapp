@@ -1,0 +1,11 @@
+version: 0.2
+phases:
+  pre_build:
+    commands:
+      - pip install cfn-lint
+  build:
+    commands:
+      - cfn-lint template.yml
+artifacts:
+  files:
+    - '**/*'
